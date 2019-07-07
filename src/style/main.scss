@@ -1,6 +1,6 @@
 *,
 *::after,
-*:: before {
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -26,7 +26,9 @@ body {
 
 
 @import 'layout';
-@import 'headerbavbar';
+@import 'headernavbar';
+@import 'auth/signin';
+@import 'auth/signup';
 
 
 
