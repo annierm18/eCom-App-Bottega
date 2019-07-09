@@ -24,6 +24,11 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+body {
+    font-family: "Open Sans";
+    color: #808080;
+}
+
 
 @import 'layout';
 @import 'headernavbar';
@@ -31,6 +36,7 @@ body {
 @import 'auth/signup';
 
 @import 'page-title';
+@import 'form-fields';
 
 
 
