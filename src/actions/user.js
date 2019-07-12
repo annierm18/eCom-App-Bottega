@@ -8,13 +8,91 @@ export function fetchUserPurchases() {
         payload: [
             {
                 _id: 0,
-                title: 'purchase 1',
-                amount: 8.02
+                total: 6.40,
+                orderNumber: 'A0048248383',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Jordan Hudgens',
+                    shippingAddress: '1234 West State Street'
+                }
             },
             {
                 _id: 1,
-                title: 'purchase 2',
-                amount: 19.40
+                total: 11.40,
+                orderNumber: 'A00486yrgidfo383',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Max Hudgens',
+                    shippingAddress: '1234 West State Street'
+                }
+            },
+            {
+                _id: 2,
+                total: 17.70,
+                orderNumber: 'A004gf8489q',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Sarah Hudgens',
+                    shippingAddress: '1234 West State Street'
+                }
+            },
+            {
+                _id: 3,
+                total: 1.40,
+                orderNumber: 'fgefg48248383',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Jordan Johns',
+                    shippingAddress: '1234 West State Street'
+                }
+            },
+            {
+                _id: 4,
+                total: 1.40,
+                orderNumber: 'fgefg48248383',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Jordan Johns',
+                    shippingAddress: '1234 West State Street'
+                }
+            },
+            {
+                _id: 5,
+                total: 1.40,
+                orderNumber: 'fgefg48248383',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Jordan Johns',
+                    shippingAddress: '1234 West State Street'
+                }
+            },
+            {
+                _id: 6,
+                total: 1.40,
+                orderNumber: 'fgefg48248383',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Jordan Johns',
+                    shippingAddress: '1234 West State Street'
+                }
+            },
+            {
+                _id: 7,
+                total: 1.40,
+                orderNumber: 'fgefg48248383',
+                orderDate: new Date(),
+                creditCard: '-0000',
+                user: {
+                    name: 'Jordan Johns',
+                    shippingAddress: '1234 West State Street'
+                }
             }
         ]
     })
