@@ -5,7 +5,7 @@ import * as actions from '../../actions';
 
 class Shop extends Component {
 
-    conponentDidMount() {
+    componentDidMount() {
         const headerLinks = [
             {
                 _id: 0,
@@ -15,29 +15,33 @@ class Shop extends Component {
         ]
         this.props.setHeaderLinks(headerLinks);
         this.props.fetchShopCategories();
+        
         this.props.fetchShopProducts();
-         // set the header links
-       
-        // fetch navbar links
-             // set the navbar links
-             // filter products with links
-
-         //fetch shop products action creator
+        
     }
+
+    shouldComponentUpdate(nextProps) {
+        if(this.props != nextProps) {
+            this.props.setNavbarLinks(nextProps.categories, (_id) => this.props.filterProductsWithCategoryId(_id));
+        }
+        return true
+    }
+
     render() {
-        // console.log(headerLinks);
-       return (
+        
+        return (
             <div className='shop'>
-                {/* shop search bar */}
-                {/* shop product */}
-                {/* shop cart button */}
+                
             </div>
-       )
+        )
     }
 }
 
 function mapStateToProps(state) {
-    return { state }
+    const { categories } = state.shop;
+    return { 
+        categories
+    }
 }
 
 Shop = connect(mapStateToProps, actions)(Shop);
