@@ -1,6 +1,7 @@
 import {
     SET_USER_PURCHASES,
-    SET_PURCHASE_DETAIL
+    SET_PURCHASE_DETAIL,
+    SET_CART_PRODUCTS
 } from './types';
 
 export function setPurchaseDetail(_id) {
@@ -10,6 +11,37 @@ export function setPurchaseDetail(_id) {
         payload: _id
     })
 }
+
+export function fetchCartProducts() {
+    return ({
+        type: SET_CART_PRODUCTS,
+        payload: [
+            {
+                _id: 0,
+                product: {
+                    _id: 0,
+                    title: 'JavaScript in the Browser',
+                    description: 'es from the design. Okay so weve got JavaScript in the browser and then they have a description, and a price, and an amount. All right, so lets just start putting those in here. We got the title, we got a description, we got a price, and then we have a quantity selected',
+                    price: 1.99,
+                    belongsTo: [0, 1]
+               },
+               quantity: 2
+            },
+            {
+                _id: 1,
+                product: {
+                    _id: 1,
+                    title: 'Graph Database',
+                    description: 'es from the design. Okay so weve got JavaScript in the browser and then they have a description, and a price, and an amount. All right, so lets just start putting those in here. We got the title, we got a description, we got a price, and then we have a quantity selected',
+                    price: 1.99,
+                    belongsTo: [0, 6]
+                },
+                quantity: 1
+            }
+        ]
+    })
+}
+
 
 export function fetchUserPurchases() {
     return ({
