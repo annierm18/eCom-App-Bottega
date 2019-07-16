@@ -8,6 +8,14 @@ import ShopCart from './shopCart';
 
 class Shop extends Component {
 
+    constructor() {
+        super()
+
+        this.state = {
+            showCart: true
+        }
+    }
+
     componentDidMount() {
         const headerLinks = [
             {
@@ -49,7 +57,7 @@ class Shop extends Component {
                     }
                 </div>
                 {
-                    <ShopCart/>
+                   this.state.showCart ? <ShopCart className='shop__cart'/> : ''
                 }
             </div>
         )
